@@ -1,0 +1,10 @@
+<h1> Add a copy </h1>
+
+<p> Choose Game </p>   
+<%= form_for @copy do |f| %>
+  <%= f.collection_select(:game_id, Game.all, :id,:name) %>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+  
+  <%= f.submit 'Add'%>
+<%end%>   

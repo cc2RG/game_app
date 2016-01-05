@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'copies/index'
 
   get 'public', to: 'games#index'
-  get 'copies', to: 'copies#index'
+  resources :copies
 
 
   root to: "games#index"

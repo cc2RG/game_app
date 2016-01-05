@@ -1,5 +1,14 @@
-<%@copies.each do |c|%>
-<%= c.game.name %> | <%= c.rating%>
+<ul>
+  
+<%current_user.copies.each do |c|%>
+<li><%= c.game.name %> | <%= c.rating%>
+| <%= link_to('Edit', edit_copy_path(c)) %>
+ <%= button_to('Delete', copy_path(c), method: :delete, data: {confirm: "Are you sure?"})%>
 <br>
 
+</li>
+
 <%end%>
+</ul>
+
+<%= link_to 'Add a copy', new_copy_path %>
