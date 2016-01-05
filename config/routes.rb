@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get 'public', to: 'games#index'
   get 'copies', to: 'copies#index'
-  
 
-  root to: "game#index"
+
+  root to: "games#index"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
