@@ -20,7 +20,13 @@ end
 def update
   copy = current_user.copies.find(params[:id])
   copy.update(copy_params)
-  redirect_to
+  redirect_to copies_path
+end  
+
+def destroy
+  copy = current_user.copies.find(params[:id])
+  copy.destroy
+  redirect_to copies_path
 end  
 
 private
